@@ -21,7 +21,7 @@
   --pill-text: #ffffff;
   --tag-bg: #e8e8e8;
   --tag-text: #333333;
-  --nav-bg: rgba(255, 255, 255, 0.45);
+  --nav-bg: rgba(255, 255, 255, 0.82);
   --shadow: 0 2px 20px rgba(0,0,0,0.08);
   --shadow-card: 0 4px 24px rgba(0,0,0,0.06);
   --shadow-hover: 0 8px 40px rgba(0,0,0,0.12);
@@ -50,7 +50,7 @@
   --pill-text: #121212;
   --tag-bg: #2d2d2d;
   --tag-text: #cccccc;
-  --nav-bg: rgba(18, 18, 18, 0.45);
+  --nav-bg: rgba(18, 18, 18, 0.88);
   --shadow: 0 2px 20px rgba(0,0,0,0.3);
   --shadow-card: 0 4px 24px rgba(0,0,0,0.25);
   --shadow-hover: 0 8px 40px rgba(0,0,0,0.4);
