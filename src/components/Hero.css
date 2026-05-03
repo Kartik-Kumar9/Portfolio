@@ -245,4 +245,8 @@
   .hero-bio {
     text-align: center;
   }
+
+  .hero-divider {
+    display: none;
+  }
 }
