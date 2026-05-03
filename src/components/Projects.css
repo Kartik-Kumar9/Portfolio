@@ -1,0 +1,185 @@
+.projects-section {
+  background: var(--bg-primary);
+}
+
+.projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* ── Card ── */
+.project-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  height: 220px;
+  transition:
+    height 0.42s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* Card styling on any hover */
+.project-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-3px);
+}
+
+/* Trigger ONLY when image panel is hovered, not the text side */
+.project-card:has(.project-cover:hover) {
+  height: 400px;
+}
+
+/* ── Content left ── */
+.project-body {
+  flex: 1;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.project-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.project-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.project-links {
+  display: flex;
+  gap: 0.4rem;
+  flex-shrink: 0;
+}
+
+.project-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-primary);
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+}
+
+.project-link:hover {
+  background: var(--accent);
+  color: var(--accent-text);
+  border-color: var(--accent);
+}
+
+.project-desc {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  line-height: 1.75;
+  flex: 1;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: auto;
+}
+
+/* ── Image panel ── */
+.project-cover {
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-card-hover);
+  border-left: 1px solid var(--border);
+  width: 30%;
+  transition: width 0.42s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-cover:hover {
+  width: calc(100% - 320px);
+}
+
+/* Both images stacked */
+.project-cover-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: opacity 0.35s ease;
+}
+
+.project-cover-idle {
+  object-fit: cover;
+  object-position: center top;
+  opacity: 1;
+  z-index: 1;
+}
+
+.project-cover:hover .project-cover-idle {
+  opacity: 0;
+}
+
+.project-cover-hover {
+  object-fit: contain;
+  object-position: center;
+  background: var(--bg-card-hover);
+  opacity: 0;
+  z-index: 2;
+}
+
+.project-cover:hover .project-cover-hover {
+  opacity: 1;
+}
+
+/* Placeholder */
+.project-cover-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-cover-initials {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--border-hover);
+  letter-spacing: 3px;
+  opacity: 0.4;
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .project-card,
+  .project-card:has(.project-cover:hover) {
+    flex-direction: column;
+    height: auto;
+    transform: none;
+  }
+  .project-cover,
+  .project-cover:hover {
+    width: 100%;
+    height: 200px;
+    border-left: none;
+    border-top: 1px solid var(--border);
+  }
+}
