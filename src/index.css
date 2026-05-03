@@ -69,6 +69,14 @@
   padding: 0;
 }
 
+img, video, gif {
+  -webkit-user-drag: none;
+  user-select: none;
+  -webkit-user-select: none;
+  pointer-events: none;
+  draggable: false;
+}
+
 html {
   scroll-behavior: smooth;
   font-size: 16px;

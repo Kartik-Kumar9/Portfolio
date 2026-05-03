@@ -196,7 +196,7 @@
   height: 38px;
   border-radius: 10px;
   border: 1px solid var(--border);
-  background: var(--bg-card);
+  background: var(--bg-secondary);
   color: var(--text-secondary);
   transition: all 0.2s ease;
 }

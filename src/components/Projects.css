@@ -10,7 +10,7 @@
 
 /* ── Card ── */
 .project-card {
-  background: var(--bg-card);
+  background: var(--bg-secondary);
   border: 1px solid var(--border);
   border-radius: 18px;
   overflow: hidden;
@@ -76,7 +76,7 @@
   height: 32px;
   border-radius: 8px;
   border: 1px solid var(--border);
-  background: var(--bg-primary);
+  background: var(--bg-secondary);
   color: var(--text-secondary);
   transition: all 0.2s ease;
 }
@@ -106,10 +106,11 @@
   flex-shrink: 0;
   position: relative;
   overflow: hidden;
-  background: var(--bg-card-hover);
-  border-left: 1px solid var(--border);
+  background: var(--bg-secondary);
+  border-left: none;
   width: 30%;
   transition: width 0.42s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: auto; /* override global img pointer-events: none */
 }
 
 .project-cover:hover {
@@ -140,7 +141,7 @@
 .project-cover-hover {
   object-fit: contain;
   object-position: center;
-  background: var(--bg-card-hover);
+  background: transparent;
   opacity: 0;
   z-index: 2;
 }
