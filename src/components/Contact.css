@@ -113,7 +113,7 @@
   border: 1px solid var(--border);
   border-radius: 10px;
   color: var(--text-primary);
-  font-family: 'Inter', sans-serif;
+  font-family: inherit;
   font-size: 0.9rem;
   transition: all 0.2s ease;
   resize: vertical;

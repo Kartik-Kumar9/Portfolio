@@ -13,7 +13,7 @@
    LEFT COLUMN — PROFILE CARD
    ============================== */
 .about-profile-card {
-  background: var(--bg-card);
+  background: var(--bg-primary);
   border: 1px solid var(--border);
   border-radius: 20px;
   padding: 1.25rem;
@@ -58,7 +58,6 @@
 }
 
 .avatar-initials {
-  font-family: 'Space Grotesk', sans-serif;
   font-size: 4rem;
   font-weight: 700;
   color: var(--border-hover);
@@ -193,7 +192,6 @@
 }
 
 .stat-value-mini {
-  font-family: 'Space Grotesk', sans-serif;
   font-size: 1.75rem;
   font-weight: 700;
   color: var(--text-primary);
@@ -289,7 +287,7 @@
 
 /* Certifications */
 .about-certs {
-  margin-bottom: 3.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .certs-list {
@@ -303,7 +301,7 @@
   align-items: center;
   gap: 1.25rem;
   padding: 1.25rem;
-  background: var(--bg-card);
+  background: var(--bg-primary);
   border: 1px solid var(--border);
   border-radius: 12px;
   transition: all 0.3s ease;

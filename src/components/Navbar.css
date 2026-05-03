@@ -34,15 +34,22 @@
   justify-content: center;
   height: 40px;
   border-radius: 10px;
-  background: var(--accent-hover);
-  color: var(--accent-text);
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700;
-  font-size: 0.95rem;
+  background: var(--brand);
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 1.15rem;
   letter-spacing: 0.5px;
-  padding: 0 0.8rem;
+  padding: 0 0.6rem;
   white-space: pre;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-logo {
+  cursor: pointer;
+}
+
+.nav-logo:hover .logo-initials {
+  transform: translateY(-2px);
 }
 
 .logo-hidden {
@@ -120,7 +127,8 @@
 
 .nav-cta {
   font-size: 0.85rem;
-  padding: 0.55rem 1.25rem;
+  font-weight: 700;
+  padding: 0.45rem 1rem;
 }
 
 .hamburger {

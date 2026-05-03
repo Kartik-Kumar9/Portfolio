@@ -82,9 +82,9 @@
 }
 
 .project-link:hover {
-  background: var(--accent);
-  color: var(--accent-text);
-  border-color: var(--accent);
+  background: rgba(255, 0, 113, 0.12);
+  color: var(--brand);
+  border-color: var(--brand);
 }
 
 .project-desc {
@@ -159,7 +159,6 @@
 }
 
 .project-cover-initials {
-  font-family: 'Space Grotesk', sans-serif;
   font-size: 3rem;
   font-weight: 800;
   color: var(--border-hover);
