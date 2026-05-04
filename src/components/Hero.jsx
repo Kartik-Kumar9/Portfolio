@@ -84,18 +84,18 @@ export default function Hero() {
 
           {/* CTA Buttons */}
           <div className="hero-ctas">
-            <a href="#contact" className="btn btn-primary"
-              onClick={e => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}>
-              <ArrowRight size={16} />
-              Hire Me
-            </a>
             <a
               href={personalInfo.resumeFile}
               download
-              className="btn btn-outline"
+              className="btn btn-primary"
             >
               <Download size={16} />
-              Download CV
+              Download Resume
+            </a>
+            <a href="#contact" className="btn btn-outline"
+              onClick={e => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}>
+              <ArrowRight size={16} />
+              Contact Me
             </a>
           </div>
 

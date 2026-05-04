@@ -33,23 +33,66 @@
   align-items: center;
   justify-content: center;
   height: 40px;
-  border-radius: 10px;
-  background: var(--brand);
-  color: #ffffff;
-  font-weight: 800;
-  font-size: 1.15rem;
-  letter-spacing: 0.5px;
-  padding: 0 0.6rem;
+  background: transparent;
+  color: var(--brand);
+  font-weight: 900;
+  font-size: 1.5rem;
+  letter-spacing: -0.5px;
+  padding: 0 0.4rem;
   white-space: pre;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.logo-initials::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 0.4rem;
+  right: 0.4rem;
+  height: 2px;
+  background: var(--brand);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: left;
 }
 
 .nav-logo {
   cursor: pointer;
 }
 
-.nav-logo:hover .logo-initials {
+.nav-logo:hover .logo-initials::after {
+  transform: scaleX(1);
+}
+
+/* Light mode: accent background box with white text like initially */
+:root .logo-initials {
+  background: var(--brand);
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 0 0.6rem;
+}
+
+:root .logo-initials::after {
+  display: none; /* Hide underline in light mode */
+}
+
+:root .nav-logo:hover .logo-initials {
   transform: translateY(-2px);
+}
+
+/* Dark mode: transparent with hot pink text */
+[data-theme="dark"] .logo-initials {
+  background: transparent;
+  color: var(--brand);
+  border-radius: 0;
+  padding: 0 0.4rem;
+  transform: none;
+}
+
+[data-theme="dark"] .logo-initials::after {
+  display: block;
 }
 
 .logo-hidden {
@@ -121,8 +164,9 @@
 }
 
 .theme-toggle:hover {
-  background: var(--bg-card-hover);
-  border-color: var(--border-hover);
+  background: rgba(255, 0, 113, 0.08);
+  border-color: var(--brand);
+  color: var(--brand);
 }
 
 .nav-cta {

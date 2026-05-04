@@ -17,7 +17,7 @@
   display: flex;
   flex-direction: row;
   align-items: stretch;
-  height: 220px;
+  height: 280px;
   transition:
     height 0.42s cubic-bezier(0.4, 0, 0.2, 1),
     border-color 0.3s ease,
@@ -89,7 +89,7 @@
 
 .project-desc {
   color: var(--text-secondary);
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.75;
   flex: 1;
 }
@@ -97,8 +97,31 @@
 .project-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
+  gap: 0.5rem;
   margin-top: auto;
+  padding-bottom: 4px; /* prevents pill border/shadow from being clipped by overflow:hidden */
+}
+
+.project-tags .tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.85rem;
+  background: var(--bg-primary); /* Alternating color */
+  color: var(--tag-text);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: default;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  border: 1px solid var(--border);
+}
+
+.project-tags .tag:hover {
+  background: rgba(255, 0, 113, 0.8);
+  color: #ffffff;
+  border-color: rgba(255, 0, 113, 0.8);
+  transform: translateY(-2px);
 }
 
 /* ── Image panel ── */
@@ -114,7 +137,7 @@
 }
 
 .project-cover:hover {
-  width: calc(100% - 320px);
+  width: 60%;
 }
 
 /* Both images stacked */

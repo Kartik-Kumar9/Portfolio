@@ -46,9 +46,21 @@ export default function About() {
                 <span className="profile-detail-item">
                   <Mail size={14} /> Contact via Email
                 </span>
-                <span className="profile-detail-item">
-                  <div className="badge-dot" style={{ margin: '0 3px' }} /> Available for hire
-                </span>
+              </div>
+              
+              <div className="profile-socials">
+                <a href={personalInfo.github} target="_blank" rel="noreferrer" aria-label="GitHub">
+                  <GithubIcon size={18} />
+                  <span className="social-text">GitHub</span>
+                </a>
+                <a href={personalInfo.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                  <LinkedinIcon size={18} />
+                  <span className="social-text">LinkedIn</span>
+                </a>
+                <a href={`mailto:${personalInfo.email}`} aria-label="Email">
+                  <Mail size={18} />
+                  <span className="social-text">Email</span>
+                </a>
               </div>
             </div>
           </div>
