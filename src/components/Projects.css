@@ -131,42 +131,41 @@
   overflow: hidden;
   background: var(--bg-secondary);
   border-left: none;
-  width: 30%;
-  transition: width 0.42s cubic-bezier(0.4, 0, 0.2, 1);
   pointer-events: auto; /* override global img pointer-events: none */
+  transition: all 0.42s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-cover:hover {
-  width: 60%;
+  /* Optional: any specific hover effect for the container if needed */
 }
 
-/* Both images stacked */
+/* Base styles for both images */
 .project-cover-img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  display: block;
   transition: opacity 0.35s ease;
 }
 
+/* Idle image dictates the width of the container */
 .project-cover-idle {
+  height: 100%;
+  width: auto;
   object-fit: cover;
-  object-position: center top;
+  display: block;
   opacity: 1;
-  z-index: 1;
 }
 
 .project-cover:hover .project-cover-idle {
   opacity: 0;
 }
 
+/* Hover image overlays perfectly over the idle image's dimensions */
 .project-cover-hover {
-  object-fit: contain;
-  object-position: center;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   background: transparent;
   opacity: 0;
-  z-index: 2;
 }
 
 .project-cover:hover .project-cover-hover {
@@ -204,5 +203,8 @@
     height: 200px;
     border-left: none;
     border-top: 1px solid var(--border);
+  }
+  .project-cover-idle {
+    width: 100%;
   }
 }
